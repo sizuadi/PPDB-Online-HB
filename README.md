@@ -17,6 +17,6 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ## User dan Password Admin
 
 ```
-username: admin
-password: 123123123
+email: admin@admin.com
+password: 123456
 ```
