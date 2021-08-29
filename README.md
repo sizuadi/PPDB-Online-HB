@@ -10,7 +10,7 @@ Projek ini dibuat awalnya untuk mengajar adik kelas saya dan untuk menambah port
 - Jalankan php artisan key:generate
 - Jalankan php artisan migrate --seed
 - Jalankan php artisan serve
-- Buka website sesuai dengan localhost dan portnya di web browser anda contoh 'localhost:8000'
+- Buka website sesuai dengan localhost dan portnya di web browser anda contoh `'http://localhost:8000'`
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
