@@ -11,6 +11,10 @@ Projek ini dibuat awalnya untuk mengajar adik kelas saya dan untuk menambah port
 - Jalankan php artisan migrate --seed
 - Jalankan php artisan serve
 - Buka website sesuai dengan localhost dan portnya di web browser anda contoh `http://localhost:8000`
+```
+user url : localhost:8000
+admin url : localhost:8000/admin
+```
 
 ## User dan Password Admin
 
