@@ -2,6 +2,7 @@
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 /*
@@ -15,7 +16,7 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home-sementara', function () {
     return Inertia::render('Home');
 });
 
@@ -39,14 +40,13 @@ Route::get('/coba', function () {
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard-sementara');
 
-require __DIR__.'/auth.php';
-
-// Route aplikasi
-Route::prefix('/app')->group(function () {
+// Route aplikasi ppdb online
+Route::prefix('')->group(function () {
 	Route::middleware(['hideRegister'])->group(function () {
-		Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register-ppdb');
+		Route::get('/register', 'Auth\RegisterController@showRegistrationForm')
+			->name('register');
 	});
 	
 	Route::get('/', 'HomeController@index')->name('landing-page');
@@ -57,7 +57,8 @@ Route::prefix('/app')->group(function () {
 	Route::get('/hasil/download', 'DaftarController@download')->name('download-hasil');
 	
 	Route::middleware(['auth'])->group(function () {
-		Route::get('/admin', 'DashboardController@index')->name('home');
+		Route::get('/adminx', 'DashboardController@index')->name('home');
+		Route::get('/admin', 'DashboardController@index')->name('dashboard');
 		Route::get('/admin/detail/{id}', 'DashboardController@detail')->name('detail-peserta');
 		Route::patch('/admin/diterima/{id}', 'DashboardController@terima')->name('peserta-diterima');
 		Route::patch('/admin/ditolak/{id}', 'DashboardController@ditolak')->name('peserta-ditolak');
@@ -72,3 +73,5 @@ Route::prefix('/app')->group(function () {
 		Route::resource('admin/penghasilan_ortu', 'PenghasilanOrangtuaController');
 	});
 });
+
+require __DIR__.'/auth.php';
