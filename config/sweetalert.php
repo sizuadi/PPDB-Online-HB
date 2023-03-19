@@ -111,7 +111,7 @@ return [
         'enable' => env('SWEET_ALERT_ANIMATION_ENABLE', false),
     ],
 
-    'animatecss' => env('SWEET_ALERT_ANIMATECSS', 'https://cdn.jsdelivr.net/npm/animate.css'),
+    'animatecss' => env('SWEET_ALERT_ANIMATECSS', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'),
 
     /*
     |--------------------------------------------------------------------------
@@ -151,6 +151,17 @@ return [
     */
 
     'toast_position' => env('SWEET_ALERT_TOAST_POSITION', 'top-end'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Progress Bar
+    |--------------------------------------------------------------------------
+    | If set to true, a progress bar at the bottom of a popup will be shown.
+    | It can be useful with toasts.
+    |
+    */
+
+    'timer_progress_bar' => env('SWEET_ALERT_TIMER_PROGRESS_BAR', false),
 
     /*
     |--------------------------------------------------------------------------
