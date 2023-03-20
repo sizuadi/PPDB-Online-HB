@@ -5,6 +5,8 @@ Projek ini dibuat awalnya untuk mengajar adik kelas saya dan untuk menambah port
 ## Cara Install Projek Ini
 - Jalankan `git clone https://github.com/sizuwanoadi/PPDB-Online-HB`
 - Jalankan composer install.
+- Jalankan npm install
+- Jalankan npm run build
 - Jalankan cp .env.example .env or copy .env.example .env.
 - Sesuaikan konfigurasi database anda di .env
 - Jalankan php artisan key:generate
