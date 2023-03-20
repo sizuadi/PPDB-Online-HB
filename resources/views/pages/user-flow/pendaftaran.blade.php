@@ -225,5 +225,7 @@
         </div>
     </div>
 </main>
+
+@vite('resources/js/app.js')
 <!-- End #main -->
 @endsection
