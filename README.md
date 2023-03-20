@@ -6,6 +6,7 @@ Projek ini dibuat awalnya untuk mengajar adik kelas saya dan untuk menambah port
 - Jalankan `git clone https://github.com/sizuwanoadi/PPDB-Online-HB`
 - Jalankan composer install.
 - Jalankan npm install
+- Jalankan npm run dev
 - Jalankan npm run build
 - Jalankan cp .env.example .env or copy .env.example .env.
 - Sesuaikan konfigurasi database anda di .env
